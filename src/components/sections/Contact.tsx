@@ -50,20 +50,6 @@ export const Contact = () => {
         throw supabaseError;
       }
 
-      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
-      const emailResponse = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!emailResponse.ok) {
-        console.error('Email send failed, but message was saved');
-      }
-
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
 

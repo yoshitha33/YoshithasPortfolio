@@ -39,13 +39,13 @@ export const Hero = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:yoshithanunna33@gmail.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:dev@example.com', label: 'Email' },
   ];
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-950 dark:to-pink-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-blue-950 dark:to-cyan-950"
     >
       <ParticleBackground />
 
@@ -57,7 +57,7 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="text-purple-500 font-semibold mb-4"
+              className="text-cyan-500 font-semibold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -66,7 +66,7 @@ export const Hero = () => {
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -98,16 +98,16 @@ export const Hero = () => {
             >
               <motion.button
                 onClick={() => scrollToSection('#projects')}
-                className="px-8 py-3 bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-full font-semibold shadow-lg cursor-hover"
-                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(192, 132, 250, 0.4)' }}
+                className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full font-semibold shadow-lg cursor-hover"
+                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(34, 211, 238, 0.4)' }}
                 whileTap={{ scale: 0.95 }}
               >
                 View Projects
               </motion.button>
               <motion.button
                 onClick={() => scrollToSection('#contact')}
-                className="px-8 py-3 border-2 border-purple-400 text-purple-400 rounded-full font-semibold cursor-hover"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(192, 132, 250, 0.1)' }}
+                className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold cursor-hover"
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(34, 211, 238, 0.1)' }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Me
@@ -126,7 +126,7 @@ export const Hero = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-400 hover:text-white transition-colors cursor-hover"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-cyan-400 hover:text-white transition-colors cursor-hover"
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   whileTap={{ scale: 0.9 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -156,16 +156,16 @@ export const Hero = () => {
                 ease: 'easeInOut',
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-3xl opacity-30 animate-pulse" />
-              <div className="relative w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 rounded-full p-2">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-3xl opacity-30 animate-pulse" />
+              <div className="relative w-80 h-80 mx-auto bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full p-2">
                 <div className="w-full h-full bg-gray-900 rounded-full flex items-center justify-center text-white text-6xl font-bold">
                   AJ
                 </div>
               </div>
             </motion.div>
 
-            <div className="absolute top-10 -right-10 w-24 h-24 bg-purple-400 rounded-lg opacity-20 animate-pulse" />
-            <div className="absolute bottom-10 -left-10 w-32 h-32 bg-pink-500 rounded-lg opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+            <div className="absolute top-10 -right-10 w-24 h-24 bg-cyan-400 rounded-lg opacity-20 animate-pulse" />
+            <div className="absolute bottom-10 -left-10 w-32 h-32 bg-blue-500 rounded-lg opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
           </motion.div>
         </div>
       </div>
@@ -176,7 +176,7 @@ export const Hero = () => {
         transition={{ duration: 1.5, repeat: Infinity }}
         onClick={() => scrollToSection('#about')}
       >
-        <ChevronDown size={40} className="text-purple-400" />
+        <ChevronDown size={40} className="text-cyan-400" />
       </motion.div>
     </section>
   );
